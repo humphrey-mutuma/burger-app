@@ -24,4 +24,10 @@
 }
 .Logo {
     height: 11%;
+    margin-bottom: 42px;
+}
+@media (Max-width) {
+    .DesktopOnly {
+        display: none;
+    }
 }
