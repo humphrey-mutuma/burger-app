@@ -83,7 +83,7 @@ class BurgerBuilder extends Component {
     render () { 
         const disabledInfo = {
             ...this.state.ingredients
-        };
+        }; 
         for ( let key in disabledInfo ) {
             disabledInfo[key] = disabledInfo[key] <= 0
         }
@@ -93,6 +93,7 @@ class BurgerBuilder extends Component {
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary 
                     ingredients={this.state.ingredients}
+                    price={this.state.totalPrice}
                     purchaseCancelled={this.purchaseCancelHandler}
                     purchaseContinue={this.purchaseContinueHandler} />
                 </Modal>
